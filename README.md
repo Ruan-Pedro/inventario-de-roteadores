@@ -1,3 +1,5 @@
+é necessário Mudar as variáveis de ambiente para utilização do BackEnd
+
 # NgRoutersApp
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 10.2.3.
