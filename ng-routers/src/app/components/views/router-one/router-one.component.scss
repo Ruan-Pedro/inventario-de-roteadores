@@ -1,0 +1,103 @@
+#select-router{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 80px;
+    background-color: black;
+    color: #45f3ff;
+}
+#select-router input{
+    font-size: 14px;
+    font-weight: 600;
+}
+
+#select-router input[type="text"]{
+    margin-left: 30px;
+    padding: 13px 10px;
+    width: 230px;
+    border-radius:25px 0  0 25px;
+    outline: none;
+    background-color: #858689;
+    border: 2px solid #45f3ff;
+    color: #45f3ff;
+}
+#select-router input[type="submit"]{
+    position: relative;
+    left: -30px;
+    margin-left: 30px;
+    padding:13px 10px;
+    width: 90px;
+    border-radius: 0 25px 25px 0 ;
+    outline: none;
+    border: 2px solid #45f3ff;
+    background-color: #45f3ff;
+    color: black;
+    transition: .5s;
+    cursor: pointer;
+}
+#select-router input[type="submit"]:hover{
+    background-color: black;
+    color: #45f3ff;
+}
+#info-container{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    display: flex;
+}
+#info-container .box-1{
+    width: 400px;
+    height: 350px;
+    padding: 35px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #545558;
+    border-radius: 15px;
+    background: linear-gradient(145deg, #5a5b5e, #4c4d4f);
+    box-shadow:  5px 5px 20px #434446,
+                -5px -5px 20px #65666a;
+}
+#info-container .box-1 h2{
+    color: #45f3ff;
+}
+#info-container .box-1 img{
+    width: 160px;
+    margin: 40px 0 0 0;
+}
+#info-container .box-2{
+    width: 300px;
+    height: 350px;
+    padding: 30px;
+    display: flex;
+    align-items: center;
+    margin-left: 80px;
+
+}
+#info-container .box-2 .box-2-list{
+    list-style: none;
+    width: 300px;
+    height: 350px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+}
+
+#info-container .box-2 li{
+    padding: 21px 4px;
+    width: 350px;
+    font-weight: 600;
+    color: #45f3ff;
+    margin: 10px 0;
+    border-radius: 10px;
+    border-radius: 15px;
+    background: linear-gradient(145deg, #5a5b5e, #4c4d4f);
+    box-shadow:  2px 2px 20px #3a3b3d,
+             -2px -2px 15px #6e6f73;
+    
+}

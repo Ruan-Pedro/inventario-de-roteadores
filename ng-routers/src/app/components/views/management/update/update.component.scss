@@ -1,0 +1,74 @@
+*{
+    animation: show 1s;
+}
+.title{
+    text-align: center;
+    margin: 50px 0;
+    font-size: 40px;
+    color: #f1f1f1;
+}
+.database-container{
+    display: block;
+    color: #f1f1f1;
+    margin: 0 auto;
+
+}
+.database-container ul{
+    list-style: none;
+    
+}
+.database-container ul li{
+    width: 250px;
+    height: 50px;
+    font-weight: 600;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.base-info li{
+    border-right: 2px solid #154A4E;
+    color: #45f3ff;
+    background-color: #000;
+}
+.data-base{
+    position: relative;
+}
+.data-base li{
+    background-color: #154A4E;
+    color: #fff;
+    border-right: 1px solid #0E3133;
+     border-bottom: 1px solid #0E3133;
+    transition: 0.5s;
+}
+.data-base li:hover{
+    background-color: #0E3133;
+}
+.delete-line{
+    position: absolute;
+    background-color: rgb(253, 38, 38);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    right: -5%;
+    width: 22px;
+    height: 22px;
+    border-radius: 2px;
+    cursor: pointer;
+}
+.delete-line img{
+    width: 15px;
+}
+.flexStyle{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+@keyframes show{
+    from{ opacity: 0;}
+    to{ opacity: 1;}
+}
+.bdrop {
+    background-color: #000;
+    backdrop-filter: blur(4px);
+}

@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="../public/styles/style.css">
+  <title>Management</title>
+</head>
+<body>
+  
+
+<!-- SEÇÃO DE CADASTRO DE NOVOS POSTS -->
+<div class="container">
+
+  <h2>Cadastre um Novo Roteador</h2>
+  <div class="row100">
+      <div class="col">
+          <div class="inputBox">
+              <input type="text" name="" required>
+              <span class="text">Nome do Roteador</span>
+              <span class="line"></span>
+          </div>
+      </div>
+      <div class="col">
+          <div class="inputBox">
+              <input class="title" type="text" name="title" required>
+              <span class="text">Fabricante</span>
+
+              <span class="line"></span>
+          </div>
+      </div>
+  </div>
+
+
+  <div class="row100">
+    <div class="col">
+        <div class="inputBox">
+            <div class="select">
+            <select type="text" name="suporte" required>
+            <option selected disabled>Possui Garantia?</option>
+            <option value="Sim">Sim</option>
+            <option value="Não">Não</option>
+
+            </select>
+        </div>
+            <!-- <span class="text">Suporte</span>
+            <span class="line"></span>  -->
+</div>
+    </div>
+    <div class="col">
+        <div class="inputBox">
+            <input  class="title" type="text" name="title" required>
+            <span class="text">Suporte <span style="font-size: 14px; font-weight: 200;">(em meses)</span></span>
+
+            <span class="line"></span>
+        </div>
+    </div>
+</div>
+<div class="row100" >
+    <div class="col">
+        <div class="inputBox textarea">
+            <textarea  id="description" required="required"></textarea>
+            <span class="text">Insira a justificativa do cadastro de roteador</span>
+            <span class="line"></span>
+        </div>
+    </div>
+    
+</div>
+  <div class="row100">
+    <div class="col">
+        <div class="inputBox">
+          <button onclick="registerItem()">Salvar Roteador</button>
+
+        </div>
+    </div>
+  </div>
+
+<div id="router-inserts">
+<!-- <div class="router-indicators">
+        <ol class="router-card">
+        <li>id</li>
+        <li>nome</li>
+        <li>Fabricante</li>
+        <li>Garantia</li>
+        <li>Suporte</li>
+            </ol>
+            <ol class="router-card">
+                <li>X9SDA4A</li>
+                <li>Router-name</li>
+                <li>Fabricante</li>
+                <li>Sim</li>
+                <li>5meses</li>
+                </ol>
+
+    </div> -->
+    
+    
+</div>
+    <!-- <div class="">
+        
+        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dignissimos neque numquam quibusdam asperiores tenetur odio excepturi vitae! Tenetur, quos! Delectus iure asperiores repudiandae id perferendis assumenda eaque ea officia necessitatibus.</p>
+    </div> -->
+</body>
+<script src="./scripts/script.js"></script>
+</html>

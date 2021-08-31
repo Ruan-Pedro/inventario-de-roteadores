@@ -1,0 +1,20 @@
+<app-sidenav></app-sidenav>
+<div class="container">
+    <h2 class="title">Router Datalines</h2>
+    <div class="database-container">
+        <ul class="base-info flexStyle">
+            <li>id</li>
+            <li>Nome</li>
+            <li>Fabricante</li>
+            <li>Garantia</li>
+            <li>Suporte</li>
+        </ul>
+        <ul *ngFor="let routerData of routerDatas " class="data-base flexStyle">
+            <li>{{ routerData.id_roteador }}</li>
+            <li>{{ routerData.nome }}</li>
+            <li>{{ routerData.fabricante }}</li>
+            <li>{{ routerData.garantia }}</li>
+            <li>{{ routerData.suporte | date:'dd MMMM yyyy' }}</li>
+            <div class="delete-line" routerLink="/management/update/{{routerData.id_roteador}}"><img src="../../../../../assets/img/gear.png" alt=""></div>
+        </ul>
+</div>

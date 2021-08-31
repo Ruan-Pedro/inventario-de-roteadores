@@ -1,0 +1,204 @@
+#dashboard{
+    margin-left:100px ;
+    text-align: center;
+    width: 90%;
+}
+.info-container{
+    width: 90%;
+    margin: 50px auto;
+    padding: 20px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.info-box{
+    position: relative;
+    width: 250px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 100px;
+    background-color: #545558;
+    color: #45f3ff;
+    border-radius: 4px;
+    transition: .5s;
+    box-shadow: 10px 10px 9px 0px rgba(0,0,0,0.59);
+    -webkit-box-shadow: 10px 10px 9px 0px rgba(0,0,0,0.59);
+    -moz-box-shadow: 10px 10px 9px 0px rgba(0,0,0,0.59);
+}
+.info-box:hover{
+    transform: scale(1.1);
+}
+.info-box .info-text{
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    left: 12%;
+    top: 20%;
+}
+.info-box .info-text strong{
+    font-size: 21px;
+    margin: 8px 0;
+}
+.info-box .info-text span{
+    font-size: 16px;
+    opacity: 0.9;
+}
+.icone{
+    font-size: 50px;
+    position: absolute;
+    right: 20%;
+    top: 30%;
+}
+
+.dashboard-boxes{
+    display: flex;
+
+    justify-content: space-around;
+
+    justify-content: space-between;
+
+    color: #45f3ff;
+
+    // width: 100%;
+}
+.dashboard-boxes .routers-container{
+    display: flex;
+    flex-direction: column;
+
+    width: 60%;
+
+    width: 70%;
+
+    background-color: #545558;
+    margin: 0 20px;
+    border-radius: 4px;
+}
+
+.dashboard-boxes .routers-container .routers-header,
+.clients-container .clients-header{
+    display: flex;
+    justify-content: space-between;
+    padding: 30px;
+    height: 90px;
+    align-items: center;
+    background-color: #858689;
+    border-radius: 4px;
+    box-shadow: 10px 10px 9px -8px rgba(0,0,0,0.59);
+-webkit-box-shadow: 10px 10px 9px -8px rgba(0,0,0,0.59);
+-moz-box-shadow: 10px 10px 9px -8px rgba(0,0,0,0.59);
+
+.dashboard-boxes .routers-container .routers-header{
+    display: flex;
+    justify-content: space-between;
+    padding: 40px;
+    align-items: center;
+
+}
+.dashboard-boxes .routers-container .routers-header button{
+    padding: 8px 15px;
+    background-color: #45f3ff;
+    outline: none;
+    border: 2px solid #45f3ff;
+    font-size: 16px;
+    font-weight: 600;
+    border-radius: 4px;
+    transition: .5s;
+
+    color: rgb(27, 27, 27);
+
+}
+.dashboard-boxes .routers-container .routers-header button:hover{
+    background-color: transparent;
+    color: #45f3ff;
+}
+.dashboard-boxes .routers-container .routers-list{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    padding: 10px;
+}
+.dashboard-boxes .routers-container .routers-list .routers-list-name{
+    display: flex;
+    justify-content: space-around;
+    padding: 10px;
+    margin: 6px 0;
+    align-items: center;
+
+    text-align: center;
+
+}
+.dashboard-boxes .routers-container .routers-list .routers-list-data{
+    display: flex;
+    justify-content: space-around;
+    padding: 10px;
+    margin: 6px 0;
+    align-items: center;
+}
+.dashboard-boxes .routers-container .routers-list .routers-list-name strong,
+.dashboard-boxes .routers-container .routers-list .routers-list-data span{
+      
+
+    background-color: #858689;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    padding: 8px 12px;
+    width: 200px;
+    height: 80px;
+    margin: 0 10px;
+    border-radius: 4px;
+    font-size: 18px;
+    transition: .5s;
+    box-shadow: 10px 10px 9px -8px rgba(0,0,0,0.59);
+-webkit-box-shadow: 10px 10px 9px -8px rgba(0,0,0,0.59);
+-moz-box-shadow: 10px 10px 9px -8px rgba(0,0,0,0.59);
+}
+.dashboard-boxes .routers-container .routers-list .routers-list-data span{
+    font-weight: 500;
+}
+.dashboard-boxes .routers-container .routers-list .routers-list-data span:hover{
+    transform: scale(1.1);
+}
+
+.clients-container{
+    background-color: #545558;
+    width: 30%;
+    display: block;
+
+}
+
+.clients-container .client-list{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+.clients-container .client-list .client-info{
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    padding: 18px 20px;
+    border-bottom: 1px solid rgb(54, 54, 54);
+    box-shadow: 8px 10px 5px -9px rgb(0 0 0 / 59%);
+    -webkit-box-shadow: 8px 10px 5px -9px rgb(0 0 0 / 59%);
+    -moz-box-shadow: 8px 10px 5px -9px rgb(0 0 0 / 59%);
+}
+.clients-container .client-list .client-info .info-text{
+    display: flex;
+    flex-direction: column;    
+    align-items: flex-start;    
+}
+.client-info img{
+    width: 40px;
+    height: 40px;
+    object-fit:fill;
+    margin-right: 18px;
+    border-radius: 20px;
+    background-color: white;
+}
+
+    background-color: red;
+    align-items: center;
+
+}
+
