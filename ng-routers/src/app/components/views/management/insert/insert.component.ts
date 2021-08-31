@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { RouterService } from '../../../services/router.service';
-import { RouterData } from '../router.model';
+import { RouterService } from '../../../../services/routers/router.service';
+import { RouterData } from '../../../../models/routers/router.model';
 
 @Component({
   selector: 'app-insert',

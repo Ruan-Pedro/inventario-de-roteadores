@@ -1,3 +1,77 @@
 @import "../node_modules/@angular/material/theming";
 @include mat-core();
 
+$primary: (
+    50 : #e5f0f1,
+    100 : #bddadc,
+    200 : #92c2c5,
+    300 : #66a9ae,
+    400 : #45969c,
+    500 : #24848b,
+    600 : #207c83,
+    700 : #1b7178,
+    800 : #16676e,
+    900 : #0d545b,
+    A100 : #90f4ff,
+    A200 : #5defff,
+    A400 : #2aeaff,
+    A700 : #11e7ff,
+    contrast: (
+        50 : #000000,
+        100 : #000000,
+        200 : #000000,
+        300 : #000000,
+        400 : #ffffff,
+        500 : #ffffff,
+        600 : #ffffff,
+        700 : #ffffff,
+        800 : #ffffff,
+        900 : #ffffff,
+        A100 : #000000,
+        A200 : #000000,
+        A400 : #000000,
+        A700 : #000000,
+    )
+);
+
+/* For use in src/lib/core/theming/_palette.scss */
+$accent: (
+    50 : #e5e5e5,
+    100 : #bdbdbe,
+    200 : #919293,
+    300 : #656668,
+    400 : #444547,
+    500 : #232427,
+    600 : #1f2023,
+    700 : #1a1b1d,
+    800 : #151617,
+    900 : #0c0d0e,
+    A100 : #54ffff,
+    A200 : #21ffff,
+    A400 : #00eded,
+    A700 : #00d4d4,
+    contrast: (
+        50 : #000000,
+        100 : #000000,
+        200 : #000000,
+        300 : #ffffff,
+        400 : #ffffff,
+        500 : #ffffff,
+        600 : #ffffff,
+        700 : #ffffff,
+        800 : #ffffff,
+        900 : #ffffff,
+        A100 : #000000,
+        A200 : #000000,
+        A400 : #000000,
+        A700 : #000000,
+    )
+);
+
+$pal-primary: mat-palette($primary);
+$pal-accent: mat-palette($secondary);
+$pal-warn: mat-palette($mat-red);
+
+$theme: mat-dark-theme($hsz-primary, $hsz-accent, $hsz-warn);
+
+@include angular-material-theme($theme);

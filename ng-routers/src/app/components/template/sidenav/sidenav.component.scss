@@ -3,16 +3,16 @@ position: fixed;
 left: 0;
 top: 0;
 z-index: 100;
+color: #fff;
 }
 
 #side-nav-all .side-nav-container{
     position: relative;
-
 }
 #side-nav-all .side-nav-container .sidenav-box{
     height: 100vh;
     width: 60px;
-    background-color: #45f3ff;
+    background-color: #002e31;
     overflow: hidden;
     transition: 0.5s;
 }
@@ -29,13 +29,22 @@ z-index: 100;
     display: flex;
     align-items: center;
 }
+#side-nav-all .side-nav-container .sidenav-box .side-item-disabled{
+    font-weight: 500;
+    transition: 0.5s;
+    animation: opacity 2s;
+    display: flex;
+    align-items: center;
+    background-color: #000;
+    color: #45f3ff;
+}
 #side-nav-all .side-nav-container .sidenav-box .side-item span{
     margin: 0 5px;    
 }
 #side-nav-all .side-nav-container .sidenav-box a {
     text-decoration: none;
     // outline: none;
-    color: #000;
+    color: #fff;
 }
 #side-nav-all .side-nav-container .sidenav-box .side-item:hover{
     background-color: #000;

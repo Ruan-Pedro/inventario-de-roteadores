@@ -6,31 +6,62 @@
             <a routerLink="/">
             <li class="side-item">
                     <mat-icon class="icon" aria-hidden="true" aria-label="Example home icon">home</mat-icon>
-                    <span>Home</span>
+                    <span>Início</span>
                 
-            </li></a>
+                </li></a>
+                <a routerLink="/dashboard">
+                <li class="side-item">
+                        <mat-icon class="icon" aria-hidden="true" aria-label="Example home icon">dashboard</mat-icon>
+                        <span>Dashboard</span>
+                    </li>
+                </a>
+                <li class="side-item-disabled">
+                    <mat-icon class="icon" aria-hidden="true" aria-label="Example home icon">router</mat-icon>
+                    <span>Roteadores</span>
+                </li>
             <a routerLink="/database">
             <li class="side-item">
                     <mat-icon class="icon" aria-hidden="true" aria-label="Example home icon">storage</mat-icon>
-                    <span>Database</span>
+                    <span>Dados</span>
                 </li>
             </a>
-            <a routerLink="/dashboard">
-            <li class="side-item">
-                    <mat-icon class="icon" aria-hidden="true" aria-label="Example home icon">dashboard</mat-icon>
-                    <span>Dashboard</span>
-                </li>
-            </a>
+            
             <a routerLink="/management">
-            <li class="side-item">
-                    <mat-icon class="icon" aria-hidden="true" aria-label="Example home icon">web</mat-icon>
-                    <span>Management</span>
-                </li>
-            </a>
+                <li class="side-item">
+                        <mat-icon class="icon" aria-hidden="true" aria-label="Example home icon">web</mat-icon>
+                        <span>Manutenção</span>
+                    </li>
+                </a>
+                <a routerLink="/management">
+                    <li class="side-item">
+                            <mat-icon class="icon" aria-hidden="true" aria-label="Example home icon">search</mat-icon>
+                            <span>Pesquisar</span>
+                        </li>
+                    </a>
+                    <li class="side-item-disabled">
+                        <mat-icon class="icon" aria-hidden="true" aria-label="Example home icon">account_box</mat-icon>
+                        <span>Clientes</span>
+                    </li>
+                    <a routerLink="/clients/database">
+                        <li class="side-item">
+                                <mat-icon class="icon" aria-hidden="true" aria-label="Example home icon">badge</mat-icon>
+                                <span>Dados</span>
+                            </li>
+                        </a>
+                        <a routerLink="/clients/management">
+                            <li class="side-item">
+                                    <mat-icon class="icon" aria-hidden="true" aria-label="Example home icon">manage_accounts</mat-icon>
+                                    <span>Manutenção</span>
+                                </li>
+                            </a>
+                            <a routerLink="/clients/search">
+                                <li class="side-item">
+                                        <mat-icon class="icon" aria-hidden="true" aria-label="Example home icon">person_search</mat-icon>
+                                        <span>Pesquisar</span>
+                                    </li>
+                                </a>
         </ol>
-        <!-- <div id="close-button">
-            <strong>X</strong>
-        </div> -->
+        
     </div>
 
 </div>

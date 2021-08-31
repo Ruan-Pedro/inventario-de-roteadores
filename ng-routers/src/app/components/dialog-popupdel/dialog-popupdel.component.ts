@@ -1,7 +1,7 @@
 import { Component, Inject, OnInit } from '@angular/core';
 import { MAT_DIALOG_DATA } from '@angular/material/dialog';
-import { RouterService } from '../services/router.service'
-import { RouterData } from '../views/management/router.model'
+import { RouterService } from '../../services/routers/router.service'
+import { RouterData } from '../../models/routers/router.model'
 import { Router } from '@angular/router'
 
 interface DialogData {

@@ -1,0 +1,79 @@
+<div class="container">
+    <h2 id="propLegal">Altere os dados do roteador escolhido</h2>
+        <div class="row100">
+            <div class="col">
+                <div class="inputBox">
+                    <input type="text" name="nome" required [(ngModel)]="routerData.nome">
+                    <span class="text">Nome do Roteador</span>
+                    <span class="line"></span>
+                </div>
+            </div>
+            <div class="col">
+                <div class="inputBox">
+                    <input class="title" type="text" name="fabricante" required [(ngModel)]="routerData.fabricante">
+                    <span class="text">Fabricante</span>
+      
+                    <span class="line"></span>
+                </div>
+            </div>
+        </div>
+      
+      
+        <div class="row100">
+          <div class="col">
+              <div class="inputBox">
+                  <div class="select" >
+                  <select type="text" name="garantia" required [(ngModel)]="routerData.garantia">
+                  <option value="" selected  disabled>Possui Garantia?</option>
+                  <option value="Sim" name="garantia" >Sim</option>
+                  <option value="Não" name="garantia" >Não</option>
+                  </select>
+                  <span class="line"></span>
+    
+                  </div>
+                  
+      </div>
+          </div>
+          <div class="col">
+              <div class="inputBox">
+                  <input style="color: #232427; z-index: 1;" class="title gamb-color-transp" type="date" name="suporte" required [(ngModel)]="routerData.suporte">
+                  <span style="z-index: 2;" class="text">Suporte</span>
+      
+                  <span style="z-index: 0;" class="line"></span>
+              </div>
+          </div>
+      </div>
+      <div class="row100" >
+        <div class="col">
+            <div class="inputBox">
+                <input class="title" type="text" name="fabricante" required [(ngModel)]="routerData.imagem">
+                <span class="text">Insira o link da imagem do roteador </span>
+    
+                <span class="line"></span>
+            </div>
+        </div>
+    
+          <div class="col">
+              <div class="inputBox textarea">
+                  <textarea matInput id="description" required="required" name="justificativa" [(ngModel)]="routerData.justificativa"></textarea>
+                  <span class="text">Insira a justificativa do cadastro de roteador</span>
+                  <span class="line"></span>
+              </div>
+          </div>
+          
+      </div>
+        <div class="row100">
+          <div class="col">
+              <div class="inputBox">
+                <button (click)="updateRouter()">Salvar Roteador</button>
+                <button (click)="cancel()">Cancelar</button>
+
+              </div>
+          </div>
+        </div>
+        <div class="result-container">
+            <!-- <router-outlet></router-outlet> -->
+        </div>
+    
+      </div>
+    

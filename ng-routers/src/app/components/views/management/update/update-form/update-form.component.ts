@@ -1,6 +1,6 @@
-import { RouterService } from './../../../../services/router.service';
+import { RouterService } from '../../../../../services/routers/router.service';
 import { Component, OnInit } from '@angular/core';
-import { RouterData } from '../../router.model';
+import { RouterData } from '../../../../../models/routers/router.model';
 import { ActivatedRoute, Router } from '@angular/router';
 @Component({
   selector: 'app-update-form',

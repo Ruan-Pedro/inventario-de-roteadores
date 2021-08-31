@@ -1,15 +1,11 @@
+import { HomeModule } from './components/home/home.module';
+import { TemplateModule } from './components/template/template.module';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { HomeComponent } from './components/template/home/home.component';
-import { FooterComponent } from './components/template/footer/footer.component';
-import { ManagementComponent } from './components/views/management/management.component';
-import { DashboardComponent } from './components/views/dashboard/dashboard.component';
-import { DatabaseComponent } from './components/views/database/database.component';
-import { SidenavComponent } from './components/template/sidenav/sidenav.component';
 import { MatIconModule } from '@angular/material/icon'
 import { MatSelectModule } from '@angular/material/select';
 import { ForDirective } from './directives/for.directive';
@@ -28,18 +24,10 @@ import { UpdateFormComponent } from './components/views/management/update/update
 import { LoginComponent } from './components/views/login/login.component';
 import { RouterOneComponent } from './components/views/router-one/router-one.component';
 
-// import {MatSidenavModule } from '@angular/material/sidenav'
-// import {MatListModule } from '@angular/material/list'
 
 @NgModule({
   declarations: [
     AppComponent,
-    HomeComponent,
-    FooterComponent,
-    ManagementComponent,
-    DashboardComponent,
-    DatabaseComponent,
-    SidenavComponent,
     ForDirective,
     DialogPopupdelComponent,
     InsertComponent,
@@ -47,8 +35,7 @@ import { RouterOneComponent } from './components/views/router-one/router-one.com
     UpdateComponent,
     UpdateFormComponent,
     LoginComponent,
-    RouterOneComponent,
-    
+    RouterOneComponent,    
   ],
   entryComponents: [DialogPopupdelComponent],
   imports: [
@@ -58,18 +45,15 @@ import { RouterOneComponent } from './components/views/router-one/router-one.com
     ReactiveFormsModule,
     MatButtonModule,
     FormsModule,
-    MatIconModule,
     MatSelectModule,
     MatSnackBarModule,
     HttpClientModule,
     MatInputModule,
+    MatIconModule,
     MatDialogModule,
-    
+    HomeModule,
+    TemplateModule
   ],
-  exports: [
-    
-  ],
-  providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
 export class AppModule { }

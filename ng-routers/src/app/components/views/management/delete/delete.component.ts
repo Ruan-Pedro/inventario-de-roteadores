@@ -1,8 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { DialogPopupdelComponent } from 'src/app/components/dialog-popupdel/dialog-popupdel.component';
-import { RouterService } from '../../../services/router.service';
+import { RouterService } from '../../../../services/routers/router.service';
 import { MatDialog,MatDialogConfig, MatDialogRef } from '@angular/material/dialog';
-import { RouterData } from '../router.model';
+import { RouterData } from '../../../../models/routers/router.model';
 @Component({
   selector: 'app-delete',
   templateUrl: './delete.component.html',
@@ -18,7 +18,7 @@ export class DeleteComponent implements OnInit {
   ) { }
 
   ngOnInit(): void {this.routerService.read().subscribe( routerDatas=>{
-    this.routerDatas = routerDatas
+    this.routerDatas = routerDatas.data
     console.log(routerDatas)
   } )
 }

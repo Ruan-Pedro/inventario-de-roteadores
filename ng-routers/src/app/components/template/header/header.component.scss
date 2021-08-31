@@ -1,0 +1,41 @@
+header{
+    display: flex;
+    padding: 0 100px;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    background-color: #00afbb;
+    height: 80px;
+}
+header .logo{
+    display: flex;
+    align-items: center;
+}
+header .logo img{
+    width: 60px;
+}
+header .logo h2{
+    margin-top: 20px;
+    margin: 20px 0 0 10px;
+}
+header .user{
+    display: flex;
+    align-items: center;
+}
+header .user button{
+    padding: 5px 12px;
+    background-color: rgb(17, 17, 17);
+    border: 2px solid transparent;
+    color: #45f3ff;
+    margin-left: 10px;
+    border-radius: 4px;
+    transition: .5s;
+    cursor: pointer;
+    font-weight: 600;
+}
+
+header .user button:hover{
+    border: solid 2px rgb(17, 17, 17);
+    background-color: transparent;
+    color: rgb(17, 17, 17);
+}
