@@ -1,49 +1,25 @@
 const express = require('express')
-const path = require('path')
-//  const bodyParser = require('body-parser')
 const sql = require('mssql')
-const config = require('./infra/DB-connection')
+const config = require('./data/connection.db')
 
-const apiRoutes = require('./routes/api')
-const userRoutes = require('./routes/userRouter')
 const cors = require('cors')
-const routerModel = require('./models/routerModel')
 const app = express()
-// const PORT = 5050
-const db_operations = require('./infra/db_operations')
-require('dotenv').config()
 const PORT = process.env.PORT
-const userRouter = require('./routes/userRouter')
 
+const routes = require('./routes/routes');
 
-const option = {
-    origin:"http://localhost:4200"
-}
+require('dotenv').config()
+
 sql.connect(config)
-// db_operations.getOrders().then(result =>{
-//     console.log(result)
-    
-// })
 
+app.use(cors())
 
-app.use(cors(option))
+app.use(routes);
 
-app.use('/',express.static(path.join(__dirname, "client")))
-app.use('/api',apiRoutes)
-app.use('/database', express.static(path.join(__dirname, "public/database.html")))
-app.use('/dashboard', express.static(path.join(__dirname, "public/dashboard.html")))
-app.use('/management',express.static(path.join(__dirname, "public/management.html")))
+app.get('/', (req,res)=>{
+    res.send('Server running')
+})
 
-
-app.use('/user', userRouter)
-// app.get('/', (req,res)=>{
-// res.send(express.static(path.join(__dirname + "client")))
-// })
-
-
-// app.get('/', (req,res)=>{
-//     res.send('funcionou amigão')
-// })
 app.listen(process.env.PORT, ()=>{
     console.log(`Server running on port ${PORT}`)
 })
