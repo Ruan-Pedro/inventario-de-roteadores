@@ -20,7 +20,7 @@ export class UpdateFormComponent implements OnInit {
     const id = this.activeRoute.snapshot.paramMap.get('id')
     this.RouterService.readById(id).subscribe(routerData =>{
       console.log(routerData)
-      this.routerData = routerData
+      this.routerData = routerData.data
     })
   }
   cancel():void {

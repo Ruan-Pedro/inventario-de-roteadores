@@ -1,17 +1,18 @@
 const express = require('express');
 const routers = express.Router();
 const controller = require('../controllers/router.controller');
+const login = require('../middleware/login')
 
-routers.get('/', controller.getAllRouters);
+routers.get('/',login.optional, controller.getAllRouters);
 
-routers.get('/:id', controller.getOneRouter);
+routers.get('/:id',login.optional, controller.getOneRouter);
 
-routers.get('/n/:name', controller.getRouterByName);
+routers.get('/n/:nome',login.optional, controller.getRouterByName);
 
-routers.post('/', controller.createRouter);
+routers.post('/', login.required,controller.createRouter);
 
-routers.put('/:id', controller.updateRouter);
+routers.put('/:id',login.required, controller.updateRouter);
 
-routers.delete('/:id', controller.deleteRouter);
+routers.delete('/:id',login.required, controller.deleteRouter);
 
 module.exports = routers;

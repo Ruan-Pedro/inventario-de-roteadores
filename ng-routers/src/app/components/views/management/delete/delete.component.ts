@@ -1,26 +1,29 @@
+import { ClientsService } from './../../../../services/clients/clients.service';
 import { Component, OnInit } from '@angular/core';
 import { DialogPopupdelComponent } from 'src/app/components/dialog-popupdel/dialog-popupdel.component';
 import { RouterService } from '../../../../services/routers/router.service';
 import { MatDialog,MatDialogConfig, MatDialogRef } from '@angular/material/dialog';
-import { RouterData } from '../../../../models/routers/router.model';
+import { ClientData } from '../../../../models/clients/client.model';
 @Component({
   selector: 'app-delete',
   templateUrl: './delete.component.html',
   styleUrls: ['../management.component.scss', './delete.component.scss']
 })
 export class DeleteComponent implements OnInit {
-  routerDatas: RouterData[]
+  clientDatas: ClientData[]
 
+  
   constructor(
-    private routerService: RouterService,
+    private clientsService: ClientsService,
     public dialog: MatDialog
 
   ) { }
 
-  ngOnInit(): void {this.routerService.read().subscribe( routerDatas=>{
-    this.routerDatas = routerDatas.data
-    console.log(routerDatas)
-  } )
+  ngOnInit(): void {
+    this.clientsService.read().subscribe(clientData =>{
+      this.clientDatas = clientData.data
+    })
+  
 }
 
 openDialog(idRouter: number){
@@ -33,7 +36,7 @@ openDialog(idRouter: number){
     'right':'450px'
   }
   dialogConfig.data = {
-    functionDel: (id_router: number) => {
+    functionDel: (id_cliente: number) => {
       this.deleteLine(idRouter);
     },
     idRouter
@@ -44,10 +47,11 @@ openDialog(idRouter: number){
 //   this.RouterService.openDialog()
 // }
 
-deleteLine(id_router): void{
-  this.routerService.deleteItem(id_router).subscribe(()=>{
-    console.log(id_router)
-    this.routerService.showMSG(`Item ${id_router} Deletado com sucesso!`)
+deleteLine(id_cliente): void{
+  this.clientsService.deleteItem(id_cliente).subscribe(()=>{
+    console.log(id_cliente)
+    this.clientsService.showMSG(`Item ${id_cliente} Deletado com sucesso!`)
+    location.reload()
   })
   }
 }

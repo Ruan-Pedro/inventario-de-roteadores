@@ -1,0 +1,22 @@
+<app-sidenav></app-sidenav>
+<app-header></app-header>
+
+<section class="search">
+    <input type="text" name="nome" id="">
+    <button [(ngModel)]="routerData.nome" (click)="search()">Pesquisar</button>
+    
+</section>
+
+<section class="result">
+    <img [src]="routerData.imagem"alt="">
+    <div class="result_info">
+    <ul>    
+        <li class="info">nome: {{routerData.nome}}</li>
+        <li class="info">fabricante: {{routerData.fabricante}}</li>
+        <li class="info">garantia: {{routerData.garantia}}</li>
+        <li class="info">suporte: {{routerData.suporte}}</li>
+        <li class="info">Cadastrado em: {{routerData.dat_cad}}</li>
+        <li class="info">Justificativa de Cadastro: {{routerData.justificativa}}</li>
+    </ul>
+    </div>
+</section>

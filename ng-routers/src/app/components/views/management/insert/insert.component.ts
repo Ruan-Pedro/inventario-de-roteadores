@@ -14,7 +14,8 @@ export class InsertComponent implements OnInit {
     garantia:'',
     suporte:'',
     justificativa:'',
-    imagem: ''
+    imagem: '',
+    dat_cad:''
   }
   constructor(
     private RouterService: RouterService,

@@ -1,22 +1,23 @@
 
-<h2 class="title">Router Datalines</h2>
+<h2 class="title">Clientes Cadastrados</h2>
 <div class="database-container">
     <ul class="base-info flexStyle">
         <li>id</li>
         <li>Nome</li>
-        <li>Fabricante</li>
-        <li>Garantia</li>
-        <li>Suporte</li>
+        <li>CNPJ</li>
+        <li>Telefone</li>
+        <li>Email</li>
+        <li>Inserido em</li>
+
     </ul>
-    <ul *ngFor="let routerData of routerDatas " class="data-base flexStyle">
-        <li>{{ routerData.id_roteador }}</li>
-        <li>{{ routerData.nome }}</li>
-        <li>{{ routerData.fabricante }}</li>
-        <li>{{ routerData.garantia }}</li>
-        <li>{{ routerData.suporte | date:'dd MMMM yyyy' }}</li>
-        <div class="delete-line" [routerLink]="[routerData.id_roteador]" (click)="openDialog(routerData.id_roteador)">
-            <img src="assets/img/gear.png" alt="">
-        </div>
+    <ul *ngFor="let clientData of clientDatas " class="data-base flexStyle">
+        <li>{{ clientData.id_cliente }}</li>
+        <li>{{ clientData.nome }}</li>
+        <li>{{ clientData.cnpj }}</li>
+        <li>{{ clientData.tel }}</li>
+        <li>{{ clientData.email }}</li>
+        <li>{{ clientData.data_cad | date:'dd MMMM yyyy' }}</li>
+        <div class="delete-line" routerLink="/clients/management/update/{{clientData.id_cliente}}"><img src="../../../../../assets/img/gear.png" alt=""></div>
     </ul>
     
 

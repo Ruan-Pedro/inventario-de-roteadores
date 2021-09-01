@@ -1,5 +1,5 @@
 export  interface ClientData {
-    id_client?:number
+    id_cliente?:number
     cnpj: number
     nome:string
     tel: number

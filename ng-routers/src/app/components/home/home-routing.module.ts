@@ -1,3 +1,4 @@
+import { SearchResultComponent as SearchResultClientComponent } from './search-clients/search-result/search-result.component';
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 
@@ -16,6 +17,8 @@ import { ManagementComponent } from './management/management.component';
 import { DatabaseClientsComponent } from './database-clients/database-clients.component';
 import { ManagementClientsComponent } from './management-clients/management-clients.component';
 import { SearchClientsComponent } from './search-clients/search-clients.component';
+import { SearchComponent } from './search/search.component';
+import { SearchResultComponent } from './search/search-result/search-result.component';
 
 
 const routes: Routes = [
@@ -50,7 +53,15 @@ const routes: Routes = [
     path: "database",
     component: DatabaseComponent
   },
-  
+  {
+    path:"search",
+    component: SearchComponent
+  },
+  {
+    path:"search/n/:nome",
+    component: SearchResultComponent
+  }
+  ,
   {
     path:"clients/database",
     component:DatabaseClientsComponent
@@ -82,6 +93,10 @@ const routes: Routes = [
   {
     path:"clients/search",
     component:SearchClientsComponent
+  },
+  {
+    path:"clients/search/nome",
+    component:SearchResultClientComponent
   }
   // {
   //   path:"management/update/:id",

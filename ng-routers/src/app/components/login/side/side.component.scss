@@ -1,0 +1,24 @@
+.side{
+    position: absolute;
+    width: 50%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url("../../../../assets/img/rotech_bg.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: #fff;
+}
+.side img{
+    width: 150px;
+    margin-top: 20px;
+    animation: show 2.5s;
+}
+.side h1{
+    font-size: 42px;
+    font-weight: 600;
+    animation: show 2.5s;
+}

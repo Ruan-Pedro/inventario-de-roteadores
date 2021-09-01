@@ -21,6 +21,8 @@ import { InsertComponent as InsertClientComponent } from './management-clients/i
 import { DeleteComponent as DeleteClientComponent } from './management-clients/delete/delete.component';
 import { UpdateComponent as UpdateClientComponent } from './management-clients/update/update.component';
 import { UpdformComponent as UpdformClientComponent } from './management-clients/update/updform/updform.component';
+import { SearchComponent } from './search/search.component';
+import { SearchResultComponent } from './search/search-result/search-result.component';
 
 @NgModule({
   declarations: [
@@ -39,6 +41,8 @@ import { UpdformComponent as UpdformClientComponent } from './management-clients
     UpdformClientComponent,
     UpdateClientComponent,
     DeleteClientComponent,
+    SearchComponent,
+    SearchResultComponent,
   ],
   imports: [
     CommonModule,

@@ -27,7 +27,7 @@ const getOneRouter = async (req,res,next) => {
 
 const getRouterByName = async (req,res,next) => {
     try {
-        const { name } = req.params;
+        const name = req.params.nome;
         const data = await routerOperations.getRouterByName(name);
         if(data){
             return res.status(200).send({ data });

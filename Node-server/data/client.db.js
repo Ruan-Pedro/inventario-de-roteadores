@@ -17,7 +17,7 @@ async function getClient(clientID){
         let pool = await sql.connect(config)
         let client = await pool.request()
         .input('input_parameter', sql.Int, clientID)
-        .query("select * from clientes_emp where id_roteador = @input_parameter");
+        .query("select * from clientes_emp where id_cliente = @input_parameter");
     return client.recordset[0]
     }
     catch(error){
@@ -62,7 +62,7 @@ async function insertClient(model){
         (@cnpj, @nome , @tel, @email, @logo, GETDATE(), @est_end,@rua_end,@n_end,@pais_end,@cid_end,@bairro_end)
         `)
         
-        // .query("select * from clientes_emp where id_roteador = @input_parameter");
+        // .query("select * from clientes_emp where id_cliente = @input_parameter");
         return insertClient.recordset
         }
         catch(error){
@@ -75,7 +75,7 @@ async function deleteClient(clientID){
         let pool = await sql.connect(config)
         let client = await pool.request()
         .input('input_parameter', sql.Int, clientID)
-        .query("delete from clientes_emp where id_roteador = @input_parameter");
+        .query("delete from clientes_emp where id_cliente = @input_parameter");
     return client.recordset
     }
     catch(error){
@@ -104,10 +104,10 @@ async function updateClient(model, clientID){
         .query(`
         UPDATE clientes_emp
         SET cnpj=@cnpj, nome=@nome , tel=@tel, email=@email, logo=@logo, est_end=@est_end,rua_end=@rua_end,n_end=@n_end,pais_end=@pais_end,cid_end=@cid_end,bairro_end=@bairro_end
-        WHERE id_roteador = @id
+        WHERE id_cliente = @id
          `)
         
-        // .query("select * from clientes_emp where id_roteador = @input_parameter");
+        // .query("select * from clientes_emp where id_cliente = @input_parameter");
     return updateClient.recordset
     }
     catch(error){

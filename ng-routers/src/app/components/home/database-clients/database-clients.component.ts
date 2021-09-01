@@ -1,4 +1,5 @@
-import { RouterData } from '../../../models/routers/router.model';
+import { ClientsService } from './../../../services/clients/clients.service';
+import { ClientData } from '../../../models/clients/client.model';
 import { Component, OnInit } from '@angular/core';
 
 @Component({
@@ -7,10 +8,15 @@ import { Component, OnInit } from '@angular/core';
 })
 export class DatabaseClientsComponent implements OnInit {
 
-  routerDatas: RouterData[]
-  constructor() { }
+  clientDatas:ClientData[]
+  constructor(
+    private clientService:ClientsService
+  ) { }
 
   ngOnInit(): void {
+    this.clientService.read().subscribe( clientData =>{
+      this.clientDatas = clientData.data
+    })
   }
 
 }

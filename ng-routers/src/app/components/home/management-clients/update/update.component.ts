@@ -1,4 +1,6 @@
-import { RouterData } from '../../../../models/routers/router.model';
+import { Router } from '@angular/router';
+import { ClientsService } from './../../../../services/clients/clients.service';
+import { ClientData } from '../../../../models/clients/client.model';
 import { Component, OnInit } from '@angular/core';
 
 @Component({
@@ -7,10 +9,16 @@ import { Component, OnInit } from '@angular/core';
 })
 export class UpdateComponent implements OnInit {
 
-  routerDatas:RouterData[]
-  constructor() { }
+  clientDatas:ClientData[]
+  constructor(
+    private clientsService:ClientsService,
+    private router:Router
+  ) { }
 
   ngOnInit(): void {
+    this.clientsService.read().subscribe(clientData=>{
+      this.clientDatas = clientData.data
+    })
   }
 
 }

@@ -30,23 +30,23 @@ export class ClientsService {
   read():Observable<{ data: ClientData[] }>{
     return this.http.get<{ data: ClientData[] }>(`${BASE_URL}/${this.api}`)
   }
-  readById(id:string): Observable<ClientData>{
+  readById(id:string): Observable<{data:ClientData}>{
     const urlById = `${BASE_URL}/${this.api}/${id}`
-    return this.http.get<ClientData>(urlById)
+    return this.http.get<{ data:ClientData }>(urlById)
   }
 
-  create(routerData:ClientData): Observable<{ data: ClientData }> {
-    return this.http.post<{ data: ClientData }>(`${BASE_URL}/${this.api}`, routerData)
+  create(clientData:ClientData): Observable<{ data: ClientData }> {
+    return this.http.post<{ data: ClientData }>(`${BASE_URL}/${this.api}`, clientData)
   }
 
-  deleteItem(id:string):Observable<Number>{
+  deleteItem(id:number):Observable<Number>{
     const urlDel = `${BASE_URL}/${this.api}/${id}`
     return this.http.delete<Number>(urlDel)
   }
 
-  updateItem(routerData:ClientData):Observable<{ data: ClientData }>{
-    const url = `${BASE_URL}/${this.api}/${routerData.id_client}`
-    return this.http.put<{ data: ClientData }>(url, routerData)}
+  updateItem(clientData:ClientData):Observable<{ data: ClientData }>{
+    const url = `${BASE_URL}/${this.api}/${clientData.id_cliente}`
+    return this.http.put<{ data: ClientData }>(url, clientData)}
 }
 
 

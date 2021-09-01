@@ -9,12 +9,12 @@
             <li>Garantia</li>
             <li>Suporte</li>
         </ul>
-        <ul *ngFor="let routerData of routerDatas " class="data-base flexStyle">
-            <li>{{ routerData.id_roteador }}</li>
-            <li>{{ routerData.nome }}</li>
-            <li>{{ routerData.fabricante }}</li>
-            <li>{{ routerData.garantia }}</li>
-            <li>{{ routerData.suporte | date:'dd MMMM yyyy' }}</li>
-            <div class="delete-line" (click)="openDialog(routerData.id_roteador)">X</div>
+        <ul *ngFor="let clientData of clientDatas" class="data-base flexStyle">
+            <li>{{ clientData.id_roteador }}</li>
+            <li>{{ clientData.nome }}</li>
+            <li>{{ clientData.fabricante }}</li>
+            <li>{{ clientData.garantia }}</li>
+            <li>{{ clientData.suporte | date:'dd MMMM yyyy' }}</li>
+            <div class="delete-line" (click)="openDialog(clientData.id_roteador)">X</div>
         </ul>
 </div>

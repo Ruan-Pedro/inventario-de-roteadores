@@ -1,0 +1,25 @@
+
+<app-side></app-side>
+<div id="login">
+    <div class="login-container">
+        <div class="login-box">
+            <h2>Cadastrar Usuário</h2>
+            <form class="form" (ngSubmit)="register()" #registerForm="ngForm">
+                <label>Nome</label>
+                <input type="text" name="nome" id="" placeholder="1 2 3 da Silva 4" [(ngModel)]="nome" #campNome="ngModel" required>
+                <app-msg *ngIf="campNome.invalid && campNome.touched" mensagem="email Obrigatório"></app-msg>
+                <label>Email</label>
+                <input type="email" name="email" id="" placeholder="contato@exemplo.com"[(ngModel)]="email" #campEmail="ngModel" required>
+                <app-msg *ngIf="campEmail.invalid && campEmail.touched" mensagem="email Obrigatório"></app-msg>
+                <label>Senha</label>
+                <input type="password" name="senha" id="" placeholder="******" [(ngModel)]="senha" #campSenha="ngModel" required>
+                <app-msg *ngIf="campSenha.invalid && campSenha.touched" mensagem="email Obrigatório"></app-msg>
+                <label>Confirme sua senha</label>
+                <input type="password" name="confirmSenha" id="" placeholder="******" [(ngModel)]="confirmSenha" #campConfSenha="ngModel" required>
+                <app-msg *ngIf="campConfSenha.invalid && campConfSenha.touched" mensagem="email Obrigatório"></app-msg>
+                <input type="submit" name="" id="" value="Cadastrar" [disabled]="registerForm.invalid">
+            </form>
+            <p>Já possui uma conta? <a routerLink="/login">Clique Aqui</a></p>
+        </div>
+    </div>
+</div>

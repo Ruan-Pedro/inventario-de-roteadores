@@ -57,3 +57,8 @@ html, body{
   padding: 0;
   color: #45f3ff;
 }
+
+@keyframes show{
+  from{ opacity: 0;}
+  to{ opacity: 1;}
+}

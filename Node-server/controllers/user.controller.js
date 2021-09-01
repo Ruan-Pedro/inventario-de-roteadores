@@ -22,16 +22,12 @@ const login = async (req,res,next) => {
     try {
         const user = req.body;
         const password = user.senha
-
         const dbPassword = await userOperations.authenticateUser(user);
         console.log(dbPassword)
-        
         if(!dbPassword){
             return res.status(404).send('User not found');
         }
-
         if(bcrypt.compareSync(password,dbPassword.senha)){
-            
             const userDB = { 
                 id: dbPassword.id_user, 
                 nome: dbPassword.nome, 
@@ -39,13 +35,10 @@ const login = async (req,res,next) => {
                 admin: dbPassword.permissao 
             }
             const token = jwt.sign(userDB, process.env.JWT_KEY, { expiresIn: "16h" })
-
             return res.status(200).send({ token, data: userDB });
         } else {
-
             return res.status(401).send('Not authorized');
         }
-
     } catch (error) {
         return res.status(500).send(error.message);
     }

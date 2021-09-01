@@ -1,0 +1,19 @@
+
+<app-side></app-side>
+<div id="login">
+    <div class="login-container">
+        <div class="login-box">
+            <h2>Login</h2>
+            <form class="form" (ngSubmit)="login()" #loginForm="ngForm">
+                <label>Email</label>
+                <input type="email" name="email" id="" placeholder="examplo@123.com" [(ngModel)]="email" #campEmail="ngModel" required>
+                <app-msg *ngIf="campEmail.invalid && campEmail.touched" mensagem="email Obrigatório"></app-msg>
+                <label>Senha</label>
+                <input type="password" name="senha" id="" placeholder="******" [(ngModel)]="senha" #campSenha="ngModel" required>
+                <app-msg *ngIf="campSenha.invalid && campSenha.touched" mensagem="senha Obrigatório"></app-msg>
+                <input type="submit" name="" id="" value="Entrar" [disabled]="loginForm.invalid">
+            </form>
+            <p>Esqueceu sua senha? <a routerLink="/register">Clique Aqui</a></p>
+        </div>
+    </div>
+</div>

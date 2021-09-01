@@ -30,9 +30,13 @@ export class RouterService {
   read():Observable<{ data: RouterData[] }>{
     return this.http.get<{ data: RouterData[] }>(`${BASE_URL}/${this.api}`)
   }
-  readById(id:string): Observable<RouterData>{
+  readById(id:string): Observable<{data:RouterData}>{
     const urlById = `${BASE_URL}/${this.api}/${id}`
-    return this.http.get<RouterData>(urlById)
+    return this.http.get<{data:RouterData}>(urlById)
+  }
+  readByName(nome:string): Observable<{data:RouterData}>{
+    const urlById = `${BASE_URL}/${this.api}/n/${nome}`
+    return this.http.get<{data:RouterData}>(urlById)
   }
 
   create(routerData:RouterData): Observable<{ data: RouterData }> {

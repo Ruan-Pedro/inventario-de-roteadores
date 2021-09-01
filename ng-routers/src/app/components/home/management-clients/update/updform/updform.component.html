@@ -1,79 +1,111 @@
 <div class="container">
-    <h2 id="propLegal">Altere os dados do roteador escolhido</h2>
-        <div class="row100">
-            <div class="col">
-                <div class="inputBox">
-                    <input type="text" name="nome" required [(ngModel)]="routerData.nome">
-                    <span class="text">Nome do Roteador</span>
-                    <span class="line"></span>
-                </div>
-            </div>
-            <div class="col">
-                <div class="inputBox">
-                    <input class="title" type="text" name="fabricante" required [(ngModel)]="routerData.fabricante">
-                    <span class="text">Fabricante</span>
-      
-                    <span class="line"></span>
-                </div>
-            </div>
-        </div>
-      
-      
-        <div class="row100">
-          <div class="col">
-              <div class="inputBox">
-                  <div class="select" >
-                  <select type="text" name="garantia" required [(ngModel)]="routerData.garantia">
-                  <option value="" selected  disabled>Possui Garantia?</option>
-                  <option value="Sim" name="garantia" >Sim</option>
-                  <option value="Não" name="garantia" >Não</option>
-                  </select>
-                  <span class="line"></span>
-    
-                  </div>
-                  
-      </div>
-          </div>
-          <div class="col">
-              <div class="inputBox">
-                  <input style="color: #232427; z-index: 1;" class="title gamb-color-transp" type="date" name="suporte" required [(ngModel)]="routerData.suporte">
-                  <span style="z-index: 2;" class="text">Suporte</span>
-      
-                  <span style="z-index: 0;" class="line"></span>
-              </div>
-          </div>
-      </div>
-      <div class="row100" >
+    <h2 id="propLegal">Altere os dados do Cliente</h2>
+    <div class="row100">
         <div class="col">
             <div class="inputBox">
-                <input class="title" type="text" name="fabricante" required [(ngModel)]="routerData.imagem">
-                <span class="text">Insira o link da imagem do roteador </span>
-    
+                <input type="text" name="nome" required [(ngModel)]="clientDatas.nome">
+                <span class="text">Nome</span>
                 <span class="line"></span>
             </div>
         </div>
-    
-          <div class="col">
-              <div class="inputBox textarea">
-                  <textarea matInput id="description" required="required" name="justificativa" [(ngModel)]="routerData.justificativa"></textarea>
-                  <span class="text">Insira a justificativa do cadastro de roteador</span>
-                  <span class="line"></span>
-              </div>
-          </div>
-          
-      </div>
-        <div class="row100">
-          <div class="col">
-              <div class="inputBox">
-                <button (click)="updateRouter()">Salvar Roteador</button>
-                <button (click)="cancel()">Cancelar</button>
+        <div class="col">
+            <div class="inputBox">
+                <input class="title" type="number" name="cnpj" required [(ngModel)]="clientDatas.cnpj">
+                <span class="text">CNPJ</span>
 
-              </div>
-          </div>
+                <span class="line"></span>
+            </div>
         </div>
-        <div class="result-container">
-            <!-- <router-outlet></router-outlet> -->
+    </div>
+
+
+    <div class="row100">
+        <div class="col">
+            <div class="inputBox">
+                <input class="title" type="number" name="tel" required [(ngModel)]="clientDatas.tel">
+                <span class="text">Telefone </span>
+
+                <span class="line"></span>
+            </div>
         </div>
-    
-      </div>
-    
+            <div class="col">
+                <div class="inputBox">
+                    <input class="title" type="email" name="email" required [(ngModel)]="clientDatas.email">
+                    <span class="text">Email </span>
+
+                    <span class="line"></span>
+                </div>
+        </div>
+</div>
+            <div class="row100">
+                
+                <div class="col">
+                    <div class="inputBox">
+                        <input class="title" type="text" name="logo" required [(ngModel)]="clientDatas.logo">
+                        <span class="text">Insira o link da logo do roteador </span>
+
+                        <span class="line"></span>
+                    </div>
+                </div>
+                </div>
+                <div class="row100">
+
+                    <div class="col">
+                        <div class="inputBox">
+                            <input class="title" type="text" name="est_end" required [(ngModel)]="clientDatas.est_end">
+                            <span class="text">Estado</span>
+
+                            <span class="line"></span>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="inputBox">
+                            <input class="title" type="text" name="rua_end" required [(ngModel)]="clientDatas.rua_end">
+                            <span class="text">Rua </span>
+
+                            <span class="line"></span>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="inputBox">
+                            <input class="title" type="text" name="bairro_end" required
+                                [(ngModel)]="clientDatas.bairro_end">
+                            <span class="text">Bairro</span>
+
+                            <span class="line"></span>
+                        </div>
+                    </div>
+                </div>
+                <div class="row100">
+                    
+
+                    <div class="col">
+                        <div class="inputBox">
+                            <input class="title" type="text" name="n_end" required [(ngModel)]="clientDatas.n_end">
+                            <span class="text">N°</span>
+                            <span class="line"></span>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="inputBox">
+                            <input class="title" type="text" name="cid_end" required [(ngModel)]="clientDatas.cid_end">
+                            <span class="text">Cidade</span>
+
+                            <span class="line"></span>
+                        </div>
+                    </div>
+
+
+            </div>
+            <div class="row100">
+                <div class="col">
+                    <div class="inputBox">
+                        <button (click)="updateClient()">Salvar Roteador</button>
+
+                    </div>
+                </div>
+            </div>
+            <div class="result-container">
+            </div>
+
+        </div>

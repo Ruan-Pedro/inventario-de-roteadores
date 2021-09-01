@@ -26,11 +26,11 @@ async function getRouter(routerID){
     }
 }
 
-async function getRouterByName(name){
+async function getRouterByName(nome){
     try{
         let pool = await sql.connect(config)
         let router = await pool.request()
-        .input('input_parameter', sql.VarChar, name)
+        .input('input_parameter', sql.VarChar, nome)
         .query("select * from roteadores_cad where nome = @input_parameter");
     return router.recordset[0]
     }

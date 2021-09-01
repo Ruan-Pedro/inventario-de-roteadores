@@ -76,7 +76,7 @@ const deleteClient = async (req,res,next) => {
         await clientOperations.deleteClient(id);
         const data = await clientOperations.getClient(id)
         if(!data){
-            return res.status(200).send({ data });
+            return res.status(200).send({ msg:"Client Deleted Successfully" });
         } else {
             return res.status(400).send({ msg: 'Cannot delete client' });
         }

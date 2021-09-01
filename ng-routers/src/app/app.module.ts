@@ -35,7 +35,7 @@ import { RouterOneComponent } from './components/views/router-one/router-one.com
     UpdateComponent,
     UpdateFormComponent,
     LoginComponent,
-    RouterOneComponent,    
+    RouterOneComponent   
   ],
   entryComponents: [DialogPopupdelComponent],
   imports: [
@@ -53,6 +53,7 @@ import { RouterOneComponent } from './components/views/router-one/router-one.com
     MatDialogModule,
     HomeModule,
     TemplateModule
+    
   ],
   bootstrap: [AppComponent],
 })
