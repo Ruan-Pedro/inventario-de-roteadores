@@ -14,6 +14,7 @@ const BASE_URL = environment.base_url;
 })
 export class AuthenticationService {
   api = "user"
+  
     nome:''
     email:''
     senha:''
